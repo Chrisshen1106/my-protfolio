@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #dcdfe6;
+  transition: transform 0.3s ease;
+}
+
+.sidebar h2 {
+  color: #0a2e5c;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #0a57a1;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #dce8f5;
+}
+
+.sidebar .subtitle {
+  font-size: 0.8rem;
+  color: #666666;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  transition: margin-left 0.3s;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 2rem;
+  color: #0a2e5c;
+}
+
+header h2 {
+  margin: 5px 0 15px 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 20px auto 50px auto;
+  padding: 0 20px;
+}
+
+/* ✅ 並排的 Education / Contact 區塊 */
+.info-columns {
+  display: flex;
+  gap: 20px; /* 卡片間距 */
+  flex-wrap: wrap;
+}
+
+.info-columns .card {
+  flex: 1;          /* 讓每個卡片平分剩餘空間 */
+  min-width: 300px; /* 小螢幕下保持可讀性 */
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cards & Sections */
+.card, .section {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h2, .section h2 {
+  color: #0a2e5c;
+  margin-bottom: 15px;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 2rem;
+  color: #0a2e5c;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .sidebar {
+    transform: translateX(-250px);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .info-columns {
+    flex-direction: column; /* 手機版卡片堆疊 */
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 40px;
+}
+
+.subtext {
+  color: #888888;   /* 顏色淡一點 */
+  font-size: 0.85rem; /* 字體小一點 */
+}

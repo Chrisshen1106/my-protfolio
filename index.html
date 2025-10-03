@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Shen | 沈芮平</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 漢堡按鈕 -->
+  <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+
+  <!-- 左側導覽列 -->
+  <nav id="sidebar" class="sidebar">
+    <h2>Sidebar</h2>
+    <a href="#profile">Profile</a>
+    <div class="subtitle">個人簡介</div>
+
+    <a href="#business-analytics">Business Analytics</a>
+    <div class="subtitle">商業分析相關課程</div>
+
+    <a href="#information-technology">Info. Technology</a>
+    <div class="subtitle">資訊技術相關課程</div>
+
+    <a href="#work-record">Work Record</a>
+    <div class="subtitle">工作紀錄</div>
+
+    <a href="#awards">Awards & Honors</a>
+    <div class="subtitle">獲獎紀錄</div>
+
+    <a href="#projects">In-class projects</a>
+    <div class="subtitle">專題紀錄</div>
+
+    <a href="#extracurricular">Extracurricular activity</a>
+    <div class="subtitle">課外活動紀錄</div>
+  </nav>
+
+  <!-- 主內容 -->
+  <div class="main-content">
+    <!-- Header -->
+    <header id="profile">
+      <img src="profile.jpg" alt="Chris Shen" class="header-photo">
+      <h1>Chris Shen | 沈芮平</h1>
+      <h2>NTU IM BAEIR Lab (Business and Economic Information Research)</h2>
+      <p>Dual background in Economics and Information Management, passionate about analytical problem-solving and interdisciplinary learning.</p>
+      <p>--- --- ---</p>
+      <span class="subtitle">Programming language : C、C++、C#、Python </span>  
+    </header>
+
+    <div class="container">
+      <!-- 你的內容保留原本結構 -->
+         <!-- ✅ 並排區塊開始 -->
+      <div class="info-columns">
+        <div class="card education-card">
+          <h2>Education</h2>
+          <div class="school-card">
+            <h3>NCKU (National Cheng Kung University)</h3>
+            <p><span class="label">Major:</span> <span class="value">Economics</span></p>
+            <p><span class="label">Minor:</span> <span class="value">Industrial & Information Management</span></p>
+          </div>
+          <div class="school-card">
+            <h3>NTU (National Taiwan University)</h3>
+            <p><span class="label">Master:</span> <span class="value">Information Management</span></p>
+          </div>
+        </div>
+        <div class="card contact-card">
+          <h2>Contact Information</h2>
+          <p><span class="label">Name:</span> <span class="value">Jui-Ping, Shen / 沈芮平</span></p>
+          <p><span class="label">Gender:</span> <span class="value">Male</span></p>
+          <p><span class="label">Phone:</span> <span class="value">(+886)909630038</span></p>
+          <p><span class="label">Email:</span> <span class="value">chrisshen1106@gmail.com</span></p>
+          <p><span class="label">Class Ranking:</span> <span class="value">xx / xx</span></p>
+          <p><span class="label">Score:</span> <span class="value">82.82 / 100</span></p>
+        </div>
+      </div>
+
+
+      <!-- Sections (保留原本內容結構) -->
+      <div id="business-analytics" class="section">
+        <h2>Business analytics 商業分析相關課程</h2>
+        <p>Mathematical statistics 數理統計學 : A+</p>
+        <p>Economics mathematic 經濟數學: A+</p>
+        <p>International finance 國際金融 : A+</p>
+        <p>Sports industry economics 運動產業經濟學 : A+</p>
+        <p>Business feasibility analysis 商用可行性分析 : A</p>
+        <p>Econommics growth 經濟成長 : A</p>
+        <p>Health economics 健康經濟學 : A</p>
+        <p>Behavior economics 行為經濟學 : A</p>
+        <p>Neural enconomics 神經經濟學 : A</p>
+        <p>International trade 國際貿易 : A-</p>
+        <p>Curency and banking 貨幣銀行學 : A-</p>
+        <p>Economics principles 經濟學原理 : A-</p>
+        <p>Econometrics 計量經濟學 : A-</p>
+        <p>Urban economics 都市經濟學 : A-</p>
+        <p>Quality management 品質管理 : A-</p>
+        <p>Marketing management 行銷管理 : A-</p>               
+      </div>
+
+      <div id="information-technology" class="section">
+        <h2>Information Technology 資訊技術相關課程</h2>
+        <p>Commercial programming 商用程式設計 : A+</p>
+        <p>Production and operations management 生產與作業管理: A+</p>
+        <p>Discrete Mathematics 離散數學 : A</p>
+        <p>Introduction to machine learning 機器學習概論 : A</p>
+        <p>Introduction to Artificial Intelligence 人工智慧導論 : A</p>
+        <p>Industrial management 工業管理概論 : A</p>
+        <p>Introduction to e-commerce 電子商務概論 : A</p>
+        <p>Introduction to Computer 計算機概論 : A-</p>
+        <p>Operation Research 作業研究 : A-</p>
+        <p>Data Structure 資料結構 : A-</p>  
+      </div>
+
+      <div id="work-record" class="section">
+        <h2>Work Record 工作記錄</h2>
+        <p>( 2025/05 ~ 2025/08 ) Industry-university cooperation 1111產學合作 : 利用人工智慧協助建置推薦系統</p>
+        <p>( 2025/09 ~ 2025/12 ) Research Assistant 1111產學合作之研究型助理 : 透過建置的推薦模型進行推薦優化</p>
+        <p>( 2025/06 ~ 2026/01 ) Teaching assistant 補習班計算機概論助理教授 : 負責課程複習、考卷出題、批改、檢討以及解題等等</p>
+      </div>
+
+      <div id="awards" class="section">
+        <h2>Awards & Honors 獲獎紀錄</h2>
+        <p>( 2023/03 ) Social Data Science Final Joint Exhibition 社會資料科學期末聯展：第一名（優勝）</p>
+        <p>( 2023/05 ) Commercial Programming final joint presentation 商用程式設計期末聯展 : 第一名</p>
+        <p>( 2024/04 ) Top Trader 群益生力軍投資競賽 : 全國第三名（代表成大出賽）</p>   
+        <p>( 2024/04 ) TOEIC Listneing and Reading : 870 Golden licence</p>        
+        <p>( 2024/05 ) NCKU Trivia Game 成大金頭腦競賽 : 第三名</p>
+      </div>
+
+      <div id="projects" class="section">
+        <h2>In-class projects 專題紀錄</h2>
+        <p>( 2023 ) Information Mangement Introduction : Tea-Tec智能茶飲系統</p>
+        <span class="subtext">TeaTec's intelligent tea beverage POS system improves on the existing POS system of a well-known beverage chain and integrates it with the Internet of Things to create a supply chain integration and ordering system. Finally, it uses RPA to achieve automated matching and delivery.</span>
+        <p>( 2023 ) Introduction to machine learning : Gaming Design</p>
+        <span class="subtext">Import common modules through C# and use the random seed module to match random cards. Then, pair the random cards with the random numbers used in the random seed to achieve a random number pairing effect. Finally, add a timer function to time the game and output the accuracy rate and reaction time.</span>
+        <p>( 2023 ) Commercial programming : Python on data analysis and visualization</p>
+        <span class="subtext">Using various open-source data platforms online to search for interesting data, then conducted data mining using Python data visualization modules. Finally, generating charts and graphs of significantly impactful dependent variables and explored their influencing factors and relationships.</span>
+        <p>( 2023 ) Econometrics (I) Final Project</p>
+        <span class="subtext">This study used multivariate regression to analyze the correlation between recent traffic accidents in Tainan City and the elderly population. The analysis used open data from the Tainan City Government and included several parameters that were likely to lead to significant results (positively correlated with traffic accidents).</span>
+        <p>( 2024 ) Econometrics (II) Final Project</p>
+        <span class="subtext">Using Stata, we analyzed the impact of TSMC's plant opening on the labor force participation rate. Given TSMC's upcoming plant opening in Tainan, our team was interested in whether this would boost labor force participation. Therefore, we decided to use a control-and-group experiment to simulate whether there would be a significant difference between Tainan with and without the TSMC plant.</span>
+        <p>( 2024 ) Introduction to e-commerce : FrostFit Bites web platform design and set up</p>
+        <span class="subtext">We built the FrostFit Bites frozen food platform. During the initial development phase, our team used Agile methodologies to rapidly iterate on the platform design. We then used Structure Coding and Design to finalize the web platform's prototype. Finally, we used Figma to visualize the platform design and simultaneously created the logical website.</span>
+        <p>( 2024 ) Data Structure : Comparing the complexity and performance between different sorting algorithm </p>
+        <span class="subtext">Using the Linux batch file system, we'll complete a C++ program's time complexity analysis for seven sorting algorithms. We'll compare and record the actual sorting times for each algorithm to verify that they match the theoretical complexity.</span>
+      </div>
+
+      <div id="extracurricular" class="section">
+        <h2>Extracurricular activity 課外活動紀錄</h2>
+        <p>( 2023 ) 114級成大經濟系學會公關長</p>
+        <p>( 2023 ) 115級成大經濟營隊輔</p>
+        <p>( 2023 ) 115級成大經濟系迎新宿營隊輔</p>
+        <p>( 2024 ) 116級成大單車節經濟系負責人</p>
+        <p>( 2024 ) 116級成大單車節公關</p>
+        <p>( 2024 ) 116級成大經濟系迎新宿營總召集人</p>
+        <p>( 2025 ) nvidia 深度學習工作坊</p>
+      </div>
+
+    <footer>
+      &copy; 2025 Chris Shen
+    </footer>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
