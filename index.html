@@ -1,4 +1,4 @@
-Ｅ<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,7 +24,7 @@
     <a href="#information-technology">Info. Technology</a>
     <div class="subtitle">資訊技術相關課程</div>
 
-    <a href="#work-record">Work Experience</a>
+    <a href="#work-record">Work Record</a>
     <div class="subtitle">工作紀錄</div>
 
     <a href="#awards">Awards & Honors</a>
@@ -37,6 +37,9 @@
     <div class="subtitle">課外活動紀錄</div>
   </nav>
 
+  <!-- 遮罩層 -->
+  <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
   <!-- 主內容 -->
   <div class="main-content">
     <!-- Header -->
@@ -46,12 +49,11 @@
       <h2>NTU IM BAEIR Lab (Business and Economic Information Research)</h2>
       <p>Dual background in Economics and Information Management, passionate about analytical problem-solving and interdisciplinary learning.</p>
       <p>--- --- ---</p>
-      <span class="subtitle">Programming language : C、C++、Python </span>  
+      <span class="subtitle">Programming language : C、C++、C#、Python </span>  
     </header>
 
     <div class="container">
-      <!-- 你的內容保留原本結構 -->
-         <!-- ✅ 並排區塊開始 -->
+      <!-- 並排區塊 -->
       <div class="info-columns">
         <div class="card education-card">
           <h2>Education</h2>
@@ -76,8 +78,7 @@
         </div>
       </div>
 
-
-      <!-- Sections (保留原本內容結構) -->
+      <!-- Sections -->
       <div id="business-analytics" class="section">
         <h2>Business analytics 商業分析相關課程</h2>
         <p>Mathematical statistics 數理統計學 : A+</p>
@@ -113,7 +114,7 @@
       </div>
 
       <div id="work-record" class="section">
-        <h2>Work Experience 工作記錄</h2>
+        <h2>Work Record 工作記錄</h2>
         <p>( 2025/05 ~ 2025/08 ) Industry-university cooperation 1111產學合作 : 利用人工智慧協助建置推薦系統</p>
         <p>( 2025/09 ~ 2025/12 ) Research Assistant 1111產學合作之研究型助理 : 透過建置的推薦模型進行推薦優化</p>
         <p>( 2025/06 ~ 2026/01 ) Teaching assistant 補習班計算機概論助理教授 : 負責課程複習、考卷出題、批改、檢討以及解題等等</p>
@@ -123,7 +124,7 @@
         <h2>Awards & Honors 獲獎紀錄</h2>
         <p>( 2023/03 ) Social Data Science Final Joint Exhibition 社會資料科學期末聯展：第一名（優勝）</p>
         <p>( 2023/05 ) Commercial Programming final joint presentation 商用程式設計期末聯展 : 第一名</p>
-        <p>( 2024/04 ) Top Trader 群益生力軍投資競賽 : 全國第十一名（代表成大出賽）</p>   
+        <p>( 2024/04 ) Top Trader 群益生力軍投資競賽 : 全國第三名（代表成大出賽）</p>   
         <p>( 2024/04 ) TOEIC Listneing and Reading : 870 Golden licence</p>        
         <p>( 2024/05 ) NCKU Trivia Game 成大金頭腦競賽 : 第三名</p>
       </div>
@@ -157,15 +158,28 @@
         <p>( 2025 ) nvidia 深度學習工作坊</p>
       </div>
 
-    <footer>
-      &copy; 2025 Chris Shen
-    </footer>
+      <footer>
+        &copy; 2025 Chris Shen
+      </footer>
+    </div>
   </div>
 
   <script>
     function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebar-overlay");
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("show");
+    }
+
+    function closeSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebar-overlay");
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
     }
   </script>
 </body>
+</html>
+
 </html>
