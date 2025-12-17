@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chris Shen | 沈芮平</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Chris Shen| 沈芮平 - Portfolio</title>
+  <meta name="description" content="Chris Shen's professional portfolio - Information Management & Economics">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- 漢堡按鈕 -->
-  <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+  <div class="hamburger" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </div>
 
   <!-- 左側導覽列 -->
   <nav id="sidebar" class="sidebar">
-    <h2>Sidebar</h2>
-    <a href="#profile">Profile</a>
-    <div class="subtitle">個人簡介</div>
+    <div class="sidebar-header">
+      <h2>Navigation</h2>
+    </div>
+    <div class="nav-links">
+      <a href="#profile" class="nav-link">
+        <i class="fas fa-user"></i>
+        <div>
+          <span class="nav-title">Profile</span>
+          <span class="nav-subtitle">個人簡介</span>
+        </div>
+      </a>
 
-    <a href="#business-analytics">Business Analytics</a>
-    <div class="subtitle">商業分析相關課程</div>
+      <a href="#business-analytics" class="nav-link">
+        <i class="fas fa-chart-line"></i>
+        <div>
+          <span class="nav-title">Business Analytics</span>
+          <span class="nav-subtitle">商業分析相關課程</span>
+        </div>
+      </a>
 
-    <a href="#information-technology">Info. Technology</a>
-    <div class="subtitle">資訊技術相關課程</div>
+      <a href="#information-technology" class="nav-link">
+        <i class="fas fa-code"></i>
+        <div>
+          <span class="nav-title">Info. Technology</span>
+          <span class="nav-subtitle">資訊技術相關課程</span>
+        </div>
+      </a>
 
-    <a href="#work-record">Work Record</a>
-    <div class="subtitle">工作紀錄</div>
+      <a href="#work-record" class="nav-link">
+        <i class="fas fa-briefcase"></i>
+        <div>
+          <span class="nav-title">Work Experience</span>
+          <span class="nav-subtitle">工作紀錄</span>
+        </div>
+      </a>
 
-    <a href="#awards">Awards & Honors</a>
-    <div class="subtitle">獲獎紀錄</div>
+      <a href="#awards" class="nav-link">
+        <i class="fas fa-trophy"></i>
+        <div>
+          <span class="nav-title">Awards & Honors</span>
+          <span class="nav-subtitle">獲獎紀錄</span>
+        </div>
+      </a>
 
-    <a href="#projects">In-class projects</a>
-    <div class="subtitle">專題紀錄</div>
+      <a href="#projects" class="nav-link">
+        <i class="fas fa-project-diagram"></i>
+        <div>
+          <span class="nav-title">Projects</span>
+          <span class="nav-subtitle">專題紀錄</span>
+        </div>
+      </a>
 
-    <a href="#extracurricular">Extracurricular activity</a>
-    <div class="subtitle">課外活動紀錄</div>
+      <a href="#extracurricular" class="nav-link">
+        <i class="fas fa-users"></i>
+        <div>
+          <span class="nav-title">Activities</span>
+          <span class="nav-subtitle">課外活動紀錄</span>
+        </div>
+      </a>
+    </div>
   </nav>
 
   <!-- 遮罩層 -->
@@ -44,123 +87,586 @@
   <div class="main-content">
     <!-- Header -->
     <header id="profile">
-      <img src="profile.jpg" alt="Chris Shen" class="header-photo">
-      <h1>Chris Shen | 沈芮平</h1>
-      <h2>NTU IM BAEIR Lab (Business and Economic Information Research)</h2>
-      <p>Dual background in Economics and Information Management, passionate about analytical problem-solving and interdisciplinary learning.</p>
-      <p>--- --- ---</p>
-      <span class="subtitle">Programming language : C、C++、Python </span>  
+      <div class="header-content">
+        <img src="profile.jpg" alt="Chris Shen" class="header-photo">
+        <div class="header-text">
+          <h1 class="name-title">Chris  <span class="name-chinese">沈芮平</span></h1>
+          <h2 class="affiliation">
+            <i class="fas fa-university"></i>
+            NTU IM BAEIR Lab
+          </h2>
+          <p class="subtitle-text">Business Analytics and Economic Information Research</p>
+          
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-code"></i> C / C++</span>
+            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag"><i class="fas fa-chart-bar"></i> Data Analysis</span>
+            <span class="skill-tag"><i class="fas fa-robot"></i> Machine Learning</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 橫向照片跑馬燈 -->
+      <div class="photo-marquee-horizontal">
+        <div class="marquee-track-horizontal" id="marqueeTrackHorizontal">
+          <div class="marquee-item-horizontal">
+            <img src="Photo/LAB聚餐.jpg" alt="LAB聚餐">
+            <span class="marquee-caption">LAB聚餐</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/SodinX金融工作坊.png" alt="SodinX金融工作坊">
+            <span class="marquee-caption">SodinX金融工作坊</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/遊戲設計期末專題2.jpg" alt="遊戲設計期末專題2">
+            <span class="marquee-caption">遊戲設計期末專題2</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/TOEIC證書.png" alt="TOEIC證書">
+            <span class="marquee-caption">TOEIC證書</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/成大單車節公關.png" alt="成大單車節公關">
+            <span class="marquee-caption">成大單車節公關</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/成大金頭腦第三名.png" alt="成大金頭腦第三名">
+            <span class="marquee-caption">成大金頭腦第三名</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/環境經濟學得獎獎狀.png" alt="環境經濟學得獎獎狀">
+            <span class="marquee-caption">環境經濟學得獎獎狀</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/經濟系新生宿營合照.png" alt="經濟系新生宿營總召">
+            <span class="marquee-caption">經濟系新生宿營總召</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/經濟系新生宿營火晚.png" alt="經濟系新生宿營總召">
+            <span class="marquee-caption">經濟系新生宿營總召</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/計量經濟學期末展演.png" alt="計量經濟學期末展演">
+            <span class="marquee-caption">計量經濟學期末展演</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/計量經濟學二參加證明.png" alt="計量經濟學二參加證明">
+            <span class="marquee-caption">計量經濟學二參加證明</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/遊戲設計期末專題.jpg" alt="遊戲設計期末專題">
+            <span class="marquee-caption">遊戲設計期末專題</span>
+          </div>
+          <div class="marquee-item-horizontal">
+            <img src="Photo/遊戲設計期末專題2.jpg" alt="遊戲設計期末專題2">
+            <span class="marquee-caption">遊戲設計期末專題2</span>
+          </div>
+        </div>
+      </div>
     </header>
 
     <div class="container">
       <!-- 並排區塊 -->
       <div class="info-columns">
         <div class="card education-card">
-          <h2>Education</h2>
+          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
           <div class="school-card">
-            <h3>NCKU (National Cheng Kung University)</h3>
-            <p><span class="label">Major:</span> <span class="value">Economics</span></p>
-            <p><span class="label">Minor:</span> <span class="value">Industrial & Information Management</span></p>
+            <div class="school-header">
+              <h3>National Taiwan University</h3>
+              <span class="school-abbr">NTU</span>
+            </div>
+            <div class="degree-info">
+              <p><span class="label"><i class="fas fa-book"></i> Major:</span> <span class="value">Information Management</span></p>
+            </div>
           </div>
           <div class="school-card">
-            <h3>NTU (National Taiwan University)</h3>
-            <p><span class="label">Master:</span> <span class="value">Information Management</span></p>
+            <div class="school-header">
+              <h3>National Cheng Kung University</h3>
+              <span class="school-abbr">NCKU</span>
+            </div>
+            <div class="degree-info">
+              <p><span class="label"><i class="fas fa-book"></i> Major:</span> <span class="value">Economics</span></p>
+              <p><span class="label"><i class="fas fa-book-open"></i> Minor:</span> <span class="value">Industrial & Information Management</span></p>
+              <div class="academic-stats">
+                <div class="stat-item">
+                  <span class="stat-label">Class Ranking</span>
+                  <span class="stat-value">17 / 72</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">GPA</span>
+                  <span class="stat-value">82.82 / 100</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="card contact-card">
-          <h2>Contact Information</h2>
-          <p><span class="label">Name:</span> <span class="value">Jui-Ping, Shen / 沈芮平</span></p>
-          <p><span class="label">Gender:</span> <span class="value">Male</span></p>
-          <p><span class="label">Phone:</span> <span class="value">(+886)909630038</span></p>
-          <p><span class="label">Email:</span> <span class="value">chrisshen1106@gmail.com</span></p>
-          <p><span class="label">Class Ranking:</span> <span class="value">17 / 72</span></p>
-          <p><span class="label">Score:</span> <span class="value">82.82 / 100</span></p>
+          <h2><i class="fas fa-address-card"></i> Contact Information</h2>
+          <div class="contact-item">
+            <i class="fas fa-user contact-icon"></i>
+            <div>
+              <span class="contact-label">Name</span>
+              <span class="contact-value">Jui-Ping Shen 沈芮平</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-venus-mars contact-icon"></i>
+            <div>
+              <span class="contact-label">Gender</span>
+              <span class="contact-value">Male</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone contact-icon"></i>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">(+886) 909-630-038</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope contact-icon"></i>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:chrisshen1106@gmail.com" class="contact-value email-link">chrisshen1106@gmail.com</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Sections -->
       <div id="business-analytics" class="section">
-        <h2>Business analytics 商業分析相關課程</h2>
-        <p>Mathematical statistics 數理統計學 : A+</p>
-        <p>Economics mathematic 經濟數學: A+</p>
-        <p>International finance 國際金融 : A+</p>
-        <p>Sports industry economics 運動產業經濟學 : A+</p>
-        <p>Business feasibility analysis 商用可行性分析 : A</p>
-        <p>Econommics growth 經濟成長 : A</p>
-        <p>Health economics 健康經濟學 : A</p>
-        <p>Behavior economics 行為經濟學 : A</p>
-        <p>Neural enconomics 神經經濟學 : A</p>
-        <p>International trade 國際貿易 : A-</p>
-        <p>Curency and banking 貨幣銀行學 : A-</p>
-        <p>Economics principles 經濟學原理 : A-</p>
-        <p>Econometrics 計量經濟學 : A-</p>
-        <p>Urban economics 都市經濟學 : A-</p>
-        <p>Quality management 品質管理 : A-</p>
-        <p>Marketing management 行銷管理 : A-</p>               
+        <h2 class="section-title">
+          <i class="fas fa-chart-line"></i>
+          Business Analytics
+          <span class="section-subtitle">商業分析相關課程 - 修課紀錄</span>
+        </h2>
+        <div class="courses-grid">
+          <div class="course-item grade-a-plus">
+            <span class="course-name">Mathematical Statistics 數理統計學</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a-plus">
+            <span class="course-name">Economics Mathematics 經濟數學</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a-plus">
+            <span class="course-name">International Finance 國際金融</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a-plus">
+            <span class="course-name">Sports Industry Economics 運動產業經濟學</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Business Feasibility Analysis 商用可行性分析</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Economics Growth 經濟成長</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Health Economics 健康經濟學</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Behavioral Economics 行為經濟學</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Neuroeconomics 神經經濟學</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">International Trade 國際貿易</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Currency and Banking 貨幣銀行學</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Economics Principles 經濟學原理</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Econometrics 計量經濟學</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Urban Economics 都市經濟學</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Quality Management 品質管理</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Marketing Management 行銷管理</span>
+            <span class="course-grade">A-</span>
+          </div>
+        </div>
       </div>
 
       <div id="information-technology" class="section">
-        <h2>Information Technology 資訊技術相關課程</h2>
-        <p>Commercial programming 商用程式設計 : A+</p>
-        <p>Production and operations management 生產與作業管理: A+</p>
-        <p>Discrete Mathematics 離散數學 : A</p>
-        <p>Introduction to machine learning 機器學習概論 : A</p>
-        <p>Introduction to Artificial Intelligence 人工智慧導論 : A</p>
-        <p>Industrial management 工業管理概論 : A</p>
-        <p>Introduction to e-commerce 電子商務概論 : A</p>
-        <p>Introduction to Computer 計算機概論 : A-</p>
-        <p>Operation Research 作業研究 : A-</p>
-        <p>Data Structure 資料結構 : A-</p>  
+        <h2 class="section-title">
+          <i class="fas fa-code"></i>
+          Information Technology
+          <span class="section-subtitle">資訊技術相關課程 - 修課紀錄</span>
+        </h2>
+        <div class="courses-grid">
+          <div class="course-item grade-a-plus">
+            <span class="course-name">Commercial Programming 商用程式設計</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a-plus">
+            <span class="course-name">Production & Operations Management 生產與作業管理</span>
+            <span class="course-grade">A+</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Discrete Mathematics 離散數學</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Introduction to Machine Learning 機器學習概論</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Introduction to AI 人工智慧導論</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Industrial Management 工業管理概論</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a">
+            <span class="course-name">Introduction to E-Commerce 電子商務概論</span>
+            <span class="course-grade">A</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Introduction to Computer 計算機概論</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Operations Research 作業研究</span>
+            <span class="course-grade">A-</span>
+          </div>
+          <div class="course-item grade-a-minus">
+            <span class="course-name">Data Structure 資料結構</span>
+            <span class="course-grade">A-</span>
+          </div>
+        </div>
       </div>
 
       <div id="work-record" class="section">
-        <h2>Work Record 工作記錄</h2>
-        <p>( 2025/05 ~ 2025/08 ) Industry-university cooperation 1111產學合作 : 利用人工智慧協助建置推薦系統</p>
-        <p>( 2025/06 ~ 2026/01 ) Teaching assistant 補習班計算機概論助理教授 : 負責課程複習、考卷出題、批改、檢討以及解題等等</p>
-        <p>( 2025/08/31 ) New Student Forum for Work-Study Students 台大資管新生座談會工讀生 : 負責指引新生、家長、簽到以及說明相關問題等等</p>
-        <p>( 2025/09 ~ 2025/12 ) Research Assistant 1111產學合作之研究型助理 : 透過建置的推薦模型進行推薦優化</p>
+        <h2 class="section-title">
+          <i class="fas fa-briefcase"></i>
+          Work Experience
+          <span class="section-subtitle">工作紀錄</span>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <i class="fas fa-calendar-alt"></i>
+              Sep 2025 - Dec 2025
+            </div>
+            <div class="timeline-content">
+              <h3>Research Assistant</h3>
+              <p class="timeline-company">1111 Industry-University Cooperation</p>
+              <p class="timeline-description">透過建置的推薦模型進行推薦優化</p>
+              <div class="timeline-tags">
+                <span class="tag">Recommendation System</span>
+                <span class="tag">AI</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <i class="fas fa-calendar-alt"></i>
+              Aug 31, 2025
+            </div>
+            <div class="timeline-content">
+              <h3>New Student Forum Assistant</h3>
+              <p class="timeline-company">NTU Information Management</p>
+              <p class="timeline-description">負責指引新生、家長、簽到以及說明相關問題等等</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <i class="fas fa-calendar-alt"></i>
+              Jun 2025 - Jan 2026
+            </div>
+            <div class="timeline-content">
+              <h3>Teaching Assistant</h3>
+              <p class="timeline-company">Computer Science Cram School</p>
+              <p class="timeline-description">補習班計算機概論助理教授：負責課程複習、考卷出題、批改、檢討以及解題等等</p>
+              <div class="timeline-tags">
+                <span class="tag">Teaching</span>
+                <span class="tag">Computer Science</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <i class="fas fa-calendar-alt"></i>
+              May 2025 - Aug 2025
+            </div>
+            <div class="timeline-content">
+              <h3>Industry-University Cooperation</h3>
+              <p class="timeline-company">1111 Job Bank</p>
+              <p class="timeline-description">利用人工智慧協助建置推薦系統</p>
+              <div class="timeline-tags">
+                <span class="tag">AI Development</span>
+                <span class="tag">Recommendation System</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="awards" class="section">
-        <h2>Awards & Honors 獲獎紀錄</h2>
-        <p>( 2023/03 ) Social Data Science Final Joint Exhibition 社會資料科學期末聯展：第一名（優勝）</p>
-        <p>( 2023/05 ) Commercial Programming final joint presentation 商用程式設計期末聯展 : 第一名</p>
-        <p>( 2024/04 ) Top Trader 群益生力軍投資競賽 : 全國第三名（代表成大出賽）</p>   
-        <p>( 2024/04 ) TOEIC Listneing and Reading : 870 Golden licence</p>        
-        <p>( 2024/05 ) NCKU Trivia Game 成大金頭腦競賽 : 第三名</p>
+        <h2 class="section-title">
+          <i class="fas fa-trophy"></i>
+          Awards & Honors
+          <span class="section-subtitle">獲獎紀錄</span>
+        </h2>
+        <div class="awards-grid">
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="award-content">
+              <h3>TOEIC Listening and Reading</h3>
+              <p class="award-achievement">870 Golden Certificate</p>
+              <p class="award-date"><i class="far fa-calendar"></i> April 2024</p>
+            </div>
+          </div>
+          
+          <div class="award-card highlight">
+            <div class="award-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="award-content">
+              <h3>Top Trader Investment Competition</h3>
+              <p class="award-achievement">🥉 3rd Place Nationally</p>
+              <p class="award-organizer">群益生力軍投資競賽（代表成大出賽）</p>
+              <p class="award-date"><i class="far fa-calendar"></i> April 2024</p>
+            </div>
+          </div>
+          
+          <div class="award-card">
+            <div class="award-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="award-content">
+              <h3>NCKU Trivia Game</h3>
+              <p class="award-achievement">🥉 3rd Place</p>
+              <p class="award-organizer">成大金頭腦競賽</p>
+              <p class="award-date"><i class="far fa-calendar"></i> May 2024</p>
+            </div>
+          </div>
+          
+          <div class="award-card highlight">
+            <div class="award-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="award-content">
+              <h3>Commercial Programming Final Exhibition</h3>
+              <p class="award-achievement">🥇 1st Place</p>
+              <p class="award-organizer">商用程式設計期末聯展</p>
+              <p class="award-date"><i class="far fa-calendar"></i> May 2023</p>
+            </div>
+          </div>
+          
+          <div class="award-card highlight">
+            <div class="award-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="award-content">
+              <h3>Social Data Science Exhibition</h3>
+              <p class="award-achievement">🥇 1st Place (Outstanding)</p>
+              <p class="award-organizer">社會資料科學期末聯展</p>
+              <p class="award-date"><i class="far fa-calendar"></i> March 2023</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="projects" class="section">
-        <h2>In-class projects 專題紀錄</h2>
-        <p>( 2023 ) Information Mangement Introduction : Tea-Tec智能茶飲系統</p>
-        <span class="subtext">TeaTec's intelligent tea beverage POS system improves on the existing POS system of a well-known beverage chain and integrates it with the Internet of Things to create a supply chain integration and ordering system. Finally, it uses RPA to achieve automated matching and delivery.</span>
-        <p>( 2023 ) Introduction to machine learning : Gaming Design</p>
-        <span class="subtext">Import common modules through C# and use the random seed module to match random cards. Then, pair the random cards with the random numbers used in the random seed to achieve a random number pairing effect. Finally, add a timer function to time the game and output the accuracy rate and reaction time.</span>
-        <p>( 2023 ) Commercial programming : Python on data analysis and visualization</p>
-        <span class="subtext">Using various open-source data platforms online to search for interesting data, then conducted data mining using Python data visualization modules. Finally, generating charts and graphs of significantly impactful dependent variables and explored their influencing factors and relationships.</span>
-        <p>( 2023 ) Econometrics (I) Final Project</p>
-        <span class="subtext">This study used multivariate regression to analyze the correlation between recent traffic accidents in Tainan City and the elderly population. The analysis used open data from the Tainan City Government and included several parameters that were likely to lead to significant results (positively correlated with traffic accidents).</span>
-        <p>( 2024 ) Econometrics (II) Final Project</p>
-        <span class="subtext">Using Stata, we analyzed the impact of TSMC's plant opening on the labor force participation rate. Given TSMC's upcoming plant opening in Tainan, our team was interested in whether this would boost labor force participation. Therefore, we decided to use a control-and-group experiment to simulate whether there would be a significant difference between Tainan with and without the TSMC plant.</span>
-        <p>( 2024 ) Introduction to e-commerce : FrostFit Bites web platform design and set up</p>
-        <span class="subtext">We built the FrostFit Bites frozen food platform. During the initial development phase, our team used Agile methodologies to rapidly iterate on the platform design. We then used Structure Coding and Design to finalize the web platform's prototype. Finally, we used Figma to visualize the platform design and simultaneously created the logical website.</span>
-        <p>( 2024 ) Data Structure : Comparing the complexity and performance between different sorting algorithm </p>
-        <span class="subtext">Using the Linux batch file system, we'll complete a C++ program's time complexity analysis for seven sorting algorithms. We'll compare and record the actual sorting times for each algorithm to verify that they match the theoretical complexity.</span>
+        <h2 class="section-title">
+          <i class="fas fa-project-diagram"></i>
+          Projects Portfolio
+          <span class="section-subtitle">專題紀錄</span>
+        </h2>
+        <div class="projects-container">
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Data Structure: Sorting Algorithm Analysis</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-description">Using the Linux batch file system, we'll complete a C++ program's time complexity analysis for seven sorting algorithms. We'll compare and record the actual sorting times for each algorithm to verify that they match the theoretical complexity.</p>
+            <div class="project-tags">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">Linux</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>E-Commerce: FrostFit Bites Platform</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-description">We built the FrostFit Bites frozen food platform. During the initial development phase, our team used Agile methodologies to rapidly iterate on the platform design. We then used Structure Coding and Design to finalize the web platform's prototype. Finally, we used Figma to visualize the platform design and simultaneously created the logical website.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">Agile</span>
+              <span class="tech-tag">Web Design</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Econometrics II: TSMC Impact Analysis</h3>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-description">Using Stata, we analyzed the impact of TSMC's plant opening on the labor force participation rate. Given TSMC's upcoming plant opening in Tainan, our team was interested in whether this would boost labor force participation. Therefore, we decided to use a control-and-group experiment to simulate whether there would be a significant difference between Tainan with and without the TSMC plant.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Stata</span>
+              <span class="tech-tag">Econometrics</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Econometrics I: Traffic Accident Analysis</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">This study used multivariate regression to analyze the correlation between recent traffic accidents in Tainan City and the elderly population. The analysis used open data from the Tainan City Government and included several parameters that were likely to lead to significant results (positively correlated with traffic accidents).</p>
+            <div class="project-tags">
+              <span class="tech-tag">Regression Analysis</span>
+              <span class="tech-tag">Open Data</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Commercial Programming: Data Analysis & Visualization</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">Using various open-source data platforms online to search for interesting data, then conducted data mining using Python data visualization modules. Finally, generating charts and graphs of significantly impactful dependent variables and explored their influencing factors and relationships.</p>
+            <div class="project-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Visualization</span>
+              <span class="tech-tag">Data Mining</span>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Machine Learning: Gaming Design</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">Import common modules through C# and use the random seed module to match random cards. Then, pair the random cards with the random numbers used in the random seed to achieve a random number pairing effect. Finally, add a timer function to time the game and output the accuracy rate and reaction time.</p>
+            <div class="project-tags">
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Game Development</span>
+            </div>
+          </div>
+          
+          <div class="project-card featured">
+            <div class="project-header">
+              <h3>Information Management: Tea-Tec Intelligent System</h3>
+              <span class="project-year">2023</span>
+            </div>
+            <p class="project-description">TeaTec's intelligent tea beverage POS system improves on the existing POS system of a well-known beverage chain and integrates it with the Internet of Things to create a supply chain integration and ordering system. Finally, it uses RPA to achieve automated matching and delivery.</p>
+            <div class="project-tags">
+              <span class="tech-tag">IoT</span>
+              <span class="tech-tag">RPA</span>
+              <span class="tech-tag">POS System</span>
+              <span class="tech-tag">Supply Chain</span>
+            </div>
+          </div>
+          
+        </div>
       </div>
 
       <div id="extracurricular" class="section">
-        <h2>Extracurricular activity 課外活動紀錄</h2>
-        <p>( 2023 ) 114級成大經濟系學會公關長</p>
-        <p>( 2023 ) 115級成大經濟營隊輔</p>
-        <p>( 2023 ) 115級成大經濟系迎新宿營隊輔</p>
-        <p>( 2024 ) 116級成大單車節經濟系負責人</p>
-        <p>( 2024 ) 116級成大單車節公關</p>
-        <p>( 2024 ) 116級成大經濟系迎新宿營總召集人</p>
-        <p>( 2025 ) nvidia 深度學習工作坊</p>
+        <h2 class="section-title">
+          <i class="fas fa-users"></i>
+          Extracurricular Activities
+          <span class="section-subtitle">課外活動紀錄</span>
+        </h2>
+        <div class="activities-list">
+          <div class="activity-item">
+            <div class="activity-year">2025</div>
+            <div class="activity-content">
+              <h3>NVIDIA Deep Learning Workshop</h3>
+              <p>NVIDIA 深度學習工作坊</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2024</div>
+            <div class="activity-content">
+              <h3>Head Organizer - NCKU Economics Freshman Camp</h3>
+              <p>116級成大經濟系迎新宿營總召集人</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2024</div>
+            <div class="activity-content">
+              <h3>PR Manager - NCKU Bike Festival</h3>
+              <p>116級成大單車節公關</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2024</div>
+            <div class="activity-content">
+              <h3>Director - NCKU Bike Festival (Economics Dept.)</h3>
+              <p>116級成大單車節經濟系負責人</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2023</div>
+            <div class="activity-content">
+              <h3>Camp Counselor - NCKU Economics Freshman Camp</h3>
+              <p>115級成大經濟系迎新宿營隊輔</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2023</div>
+            <div class="activity-content">
+              <h3>Camp Counselor - NCKU Economics Summer Camp</h3>
+              <p>115級成大經濟營隊輔</p>
+            </div>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-year">2023</div>
+            <div class="activity-content">
+              <h3>PR Director - NCKU Economics Student Association</h3>
+              <p>114級成大經濟系學會公關長</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer>
-        &copy; 2025 Chris Shen
+        <div class="footer-content">
+          <p>&copy; 2025 Chris Shen. All rights reserved.</p>
+          <p class="footer-subtitle">Built with passion for technology and innovation</p>
+        </div>
       </footer>
     </div>
   </div>
