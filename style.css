@@ -828,6 +828,32 @@ header::before {
   border-left-color: #f5576c;
 }
 
+.project-card.year-2025 {
+  background: linear-gradient(135deg, #fff8f0 0%, #fff3e6 100%);
+  border-left-color: #ff9800;
+}
+
+.project-card.year-2025:hover {
+  background: linear-gradient(135deg, #fff3e6 0%, #ffe8cc 100%);
+}
+
+.project-card.year-2025 .project-year {
+  background: #ff9800;
+}
+
+.project-card.year-2023 {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+  border-left-color: #f5576c;
+}
+
+.project-card.year-2023:hover {
+  background: linear-gradient(135deg, #ffe8e8 0%, #ffd4d4 100%);
+}
+
+.project-card.year-2023 .project-year {
+  background: #f5576c;
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
